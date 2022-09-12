@@ -14,10 +14,10 @@ def create_app():
     jwt.init_app(app)
     db.init_app(app)
 
+    from src.blueprints.core import bp as bp_core
+
     with app.app_context():
         db.create_all()
-
-    from src.blueprints.core import bp as bp_core
     bp_core.config(app)
 
     return app

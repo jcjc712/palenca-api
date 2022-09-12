@@ -3,13 +3,6 @@ from src.extension import db
 from sqlalchemy.sql import func
 
 
-# class ExchangeRate(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     currency = db.Column(db.String(100), nullable=False)
-#     mx_amount = db.Column(db.String(100), nullable=False)
-#     created_at = db.Column(db.DateTime(timezone=True),
-#                            server_default=func.now())
-
 class User(db.Model):
     email = db.Column(db.String(100), nullable=False, primary_key=True)
     # platform = db.Column(db.String(100), nullable=False)
